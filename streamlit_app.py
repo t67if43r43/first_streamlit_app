@@ -45,10 +45,12 @@ my_data_rows = my_cur.fetchall()
 streamlit.text("The fruit loadlist contains:")
 streamlit.text(my_data_rows)
 
-try: 
-  add_my_fruit = streamlit.text_input('What fruit would you like to add?')
-  if not add_my_fruit:
-    streamlit.error("Please enter a fruit to add it.")
-  else:
-    my_cur.execute("insert into fruit_load_list values ('" + add_my_fruit + "')")
-    streamlit.write('Thanks for adding ', add_my_fruit)
+#try: 
+#  add_my_fruit = streamlit.text_input('What fruit would you like to add?')
+#  if not add_my_fruit:
+#    streamlit.error("Please enter a fruit to add it.")
+#  else:
+#    my_cur.execute("insert into fruit_load_list values ('" + add_my_fruit + "')")
+#    streamlit.write('Thanks for adding ', add_my_fruit)
+#except URLError as e:
+#  streamlit.error(e)
